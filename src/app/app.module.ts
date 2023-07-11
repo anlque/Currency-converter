@@ -1,18 +1,15 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CurrencyConverterComponent } from './currency-converter.component';
+import { NgModule } from '@angular/core';
+import { CurrencyRatesComponent } from './currency-rates.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
+  imports: [BrowserModule, FormsModule, HttpClientModule], 
+  declarations: [AppComponent,CurrencyRatesComponent, CurrencyConverterComponent], 
   bootstrap: [AppComponent]
 })
 export class AppModule { }
